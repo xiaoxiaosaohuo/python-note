@@ -24,6 +24,12 @@ username = "mikelabs"  # replace with your username from app.activeloop.ai
 db = DeepLake(dataset_path=f"hub://{username}/twitter-algorithm",
               embedding_function=embeddings, public=True)
 db.add_documents(texts)
+
+retriever = db.as_retriever()
+retriever.search_kwargs['distance_metric'] = 'cos'
+retriever.search_kwargs['fetch_k'] = 100
+retriever.search_kwargs['maximal_marginal_relevance'] = True
+retriever.search_kwargs['k'] = 10
 print("done")
 
 # Utilizing dolly-v2-12b to Process and Understand User Queries

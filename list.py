@@ -17,5 +17,6 @@ print(list1 * 3)
 list1.sort(reverse=True)
 print(list1)
 
-list2 = sorted(list1)
-print(list2)
+
+list3 = sorted(list1)
+print(list3)
