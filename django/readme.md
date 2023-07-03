@@ -17,3 +17,9 @@ python3 -m venv .
 ```
 source venv/bin/activate
 ```
+
+### create web project
+
+```
+django-admin startproject web
+```
