@@ -5,7 +5,9 @@
 <div>
     {% for room in rooms %}
     <div>
-        <h3>{{room.id}}-{{room.name}}</>
+        <!-- <h3><a href="/room/{{room.id}}">{{room.id}}</a>-{{room.name}}</> -->
+        <h3><a href="{% url 'room' room.id %}">{{room.id}}</a>-{{room.name}}</>
+  
     </div>
     {% endfor %}
 </div>
