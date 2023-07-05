@@ -30,6 +30,18 @@ print(set1 - set2)
 
 print(set1 ^ set2) # 对称差集
 
+# 判断子集和超集
+print(set2 <= set1)
+# print(set2.issubset(set1))
+
+print(set1 >= set2)
+# print(set1.issuperset(set2))
+
 
 if 3 in set1:
     print("3 is in set1")
+
+
+# 创建集合的推导式语法(推导式也可以用于推导集合)
+set4 = {num for num in range(1, 100) if num % 3 == 0 or num % 5 == 0}
+print(set4)

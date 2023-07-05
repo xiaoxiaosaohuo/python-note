@@ -27,3 +27,16 @@ for x in fib():
 #lamnda arguments:expression,在一行代码中定义简单的函数
 sum = lambda x,y:x+y
 print(sum(3,4))
+
+# 作用域
+
+def foo():
+    global a # 声明全局变量
+    a = 200
+    print(a)  # 200
+
+
+if __name__ == '__main__':
+    a = 100
+    foo()
+    print(a)  # 200

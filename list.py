@@ -20,3 +20,29 @@ print(list1)
 
 list3 = sorted(list1)
 print(list3)
+
+
+list1 = [1, 3, 5, 7, 100]
+
+# 通过enumerate函数处理列表之后再遍历可以同时获得元素索引和值
+for index, elem in enumerate(list1):
+    print(index, elem)
+
+# 添加元素
+list1.append(200)
+list1.insert(1, 400)
+# 合并两个列表
+# list1.extend([1000, 2000])
+list1 += [1000, 2000]
+
+list1.pop(0)
+list1.pop(len(list1) - 1)
+print(list1)  # [400, 5, 7, 100, 200, 1000]
+# 清空列表元素
+list1.clear()
+print(list1)  # []
+
+fruits = ['grape', 'apple', 'strawberry', 'waxberry']
+
+# 可以通过反向切片操作来获得倒转后的列表的拷贝
+fruits5 = fruits[::-1]
